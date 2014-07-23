@@ -47,7 +47,7 @@ class Document(Element):
         s.append('\n')
         try:
             s.append(self.root().str())
-        except TypeError:
+        except AttributeError:
             pass
         return ''.join(s)
     
